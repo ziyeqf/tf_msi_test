@@ -1,10 +1,5 @@
 provider_installation {
-  filesystem_mirror {
-    path    = "/opt/tf-provider-mirror"
-    include = ["registry.terraform.io/hashicorp/azurerm"]
-  }
-
-  direct {
-    exclude = ["registry.terraform.io/hashicorp/azurerm"]
+  dev_overrides {
+    "hashicorp/azurerm" = "/opt/tf-provider-dev/azurerm"
   }
 }
